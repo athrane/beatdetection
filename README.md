@@ -30,11 +30,27 @@ The patch renders a graph and three circles:
 
 ## Algorithms
 
-## Algorithm 1
+## Random Algorithm 1
 
-1) Get FFT Array average 
+## The FFT array 
+The AudioAnalyser op produces an array with:
+* Size = 256
+* Smoothing = 0.3
+
+### Get FFT Array average 
+The average volume is calulated using the FFTAreaAverage operator.
+Drums and beats then to have a low frequency.
+So the average volume is calculated from "the upper left" corner of the FFT array using these parameters:
+*  X pos = 0
+*  Y pos = 0
+*  Width = 0.2
+*  Height = 0.7
 
 
+## Inspiration
+
+http://archive.gamedev.net/archive/reference/programming/features/beatdetection/index.html
+https://github.com/michaelkrzyzaniak/Beat-and-Tempo-Tracking
 
 
 
