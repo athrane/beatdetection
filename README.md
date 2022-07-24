@@ -32,13 +32,17 @@ The patch renders a graph and three circles:
 
 ## Adhoc Algorithm 1
 
-### The FFT array 
-The AudioAnalyser op produces an array with:
+### Get the FFT array 
+The [AudioAnalyser operator](https://cables.gl/op/Ops.WebAudio.AudioAnalyzer_v2?w=examples) produces an FFT array with parameters:
 * Size = 256
 * Smoothing = 0.3
 
-### Get FFT Array average 
-The average volume (AV) is calulated using the FFTAreaAverage operator.
+The values in the array are between 0..1.
+
+### Get average volume for select frequencies
+The average volume (AV) is calulated using the 
+[FFTAreaAverage operator](https://cables.gl/op/Ops.WebAudio.FFTAreaAverage_v2?w=examples).
+
 Drums and beats then to have a low frequency.
 So the average volume is calculated from "the upper left" corner of the FFT array using these parameters:
 *  X pos = 0
