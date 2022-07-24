@@ -1,6 +1,8 @@
 # beatdetection
 Experiment to create beat detection algorithm in cables.gl
 
+If you can help to improve the detection algorithms please let me know.
+
 ## Usage
 
 The patch uses the MicrophoneIn operator to get audio input.
@@ -26,4 +28,16 @@ The patch renders a graph and three circles:
 - The green circle is beat detection algorithm #1
 - The blue circle is beat detection algorithm #2
 
-If you can help to improve the detection algorithms please let me know.
+## Algorithms
+
+## Algorithm 1
+
+1) Get FFT Array average 
+
+
+
+
+
+
+
+
