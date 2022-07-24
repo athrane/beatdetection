@@ -32,14 +32,14 @@ The patch renders a graph and three circles:
 
 ## Adhoc Algorithm 1
 
-### Get the FFT array 
+### Calculate FFT array 
 The [AudioAnalyser operator](https://cables.gl/op/Ops.WebAudio.AudioAnalyzer_v2?w=examples) produces an FFT array with parameters:
 * Size = 256
 * Smoothing = 0.3
 
 The values in the array are between 0..1.
 
-### Get average volume for select frequencies
+### Get average volume (AV) for select frequencies
 The average volume (AV) is calulated using the 
 [FFTAreaAverage operator](https://cables.gl/op/Ops.WebAudio.FFTAreaAverage_v2?w=examples).
 
@@ -50,9 +50,16 @@ So the average volume is calculated from "the upper left" corner of the FFT arra
 *  Width = 0.2
 *  Height = 0.7
 
-### Delta
+The value for AV is between 0..1.
 
+### Calculate Delta of average volume
 Calculate delta from previous AV.
+
+The value for AV is between 0..1.
+
+### Register single beat for sequence positive deltas
+If delta is postive...
+
 
 ## Inspiration
 
